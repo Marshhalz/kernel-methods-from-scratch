@@ -1,0 +1,34 @@
+[project]
+name = "kernel-methods-from-scratch"
+version = "0.1.0"
+description = "Kernel functions and RKHS theory implemented from scratch — following Shawe-Taylor & Cristianini (2004)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.12.0",
+    "matplotlib>=3.8.0",
+    "jupyter>=1.1.1",
+    "ipykernel>=7.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kernels"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+src = ["src"]

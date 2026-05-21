@@ -1,0 +1,8 @@
+# Normalise line endings
+* text=auto eol=lf
+
+# Binary files — never diff
+*.png binary
+*.jpg binary
+*.pdf binary
+*.npz binary

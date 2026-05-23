@@ -39,7 +39,7 @@ By **Mercer's theorem**, every PSD kernel corresponds to an inner product in
 some Hilbert space $\mathcal{H}$ — the **Reproducing Kernel Hilbert Space
 (RKHS)** associated with $k$.
 
-### Kernels implemented so far
+### Kernels implemented
 
 | Kernel | Formula | Feature space |
 |--------|---------|---------------|
@@ -56,6 +56,18 @@ some Hilbert space $\mathcal{H}$ — the **Reproducing Kernel Hilbert Space
 
 ---
 
+## Notebooks
+
+| Notebook | Topic | Key results |
+|----------|-------|-------------|
+| [`01-kernel-visualisation`](notebooks/01-kernel-visualisation.ipynb) | Gram matrix structure, σ sensitivity, PSD verification | RBF achieves clean block separation; linear/polynomial are rank-2 on 2D data |
+| `02-kernel-pca` | Dimensionality reduction in RKHS | coming soon |
+| `02-kernel-regression` | Representer theorem + kernel ridge regression | coming soon |
+| `03-svm` | Support Vector Machines from scratch | coming soon |
+| `04-gaussian-processes` | Probabilistic view of kernels | coming soon |
+
+---
+
 ## Project structure
 
 ```
@@ -65,7 +77,8 @@ kernel-methods-from-scratch/
 │   └── kernels.py       # LinearKernel, PolynomialKernel, RBFKernel
 ├── tests/
 │   └── test_kernels.py  # PSD, symmetry, and property tests
-├── notebooks/           # Exploratory notebooks (coming soon)
+├── notebooks/
+│   └── 01-kernel-visualisation.ipynb
 └── pyproject.toml
 ```
 
@@ -76,8 +89,8 @@ kernel-methods-from-scratch/
 | Phase | Topic | Status |
 |-------|-------|--------|
 | 1 | Kernel functions (linear, polynomial, RBF) | ✅ Done |
-| 2 | Kernel matrix visualisation + feature space intuition | 🔜 Next |
-| 3 | Kernel PCA — dimensionality reduction in RKHS | ⬜ Planned |
+| 2 | Gram matrix visualisation + feature space intuition | ✅ Done |
+| 3 | Kernel PCA — dimensionality reduction in RKHS | 🔜 Next |
 | 4 | Kernel ridge regression | ⬜ Planned |
 | 5 | Support Vector Machines (SVM) from scratch | ⬜ Planned |
 | 6 | Gaussian Processes — the probabilistic view of kernels | ⬜ Planned |
@@ -88,7 +101,7 @@ kernel-methods-from-scratch/
 
 ```bash
 # Clone and set up (requires Python 3.11+)
-git clone https://github.com/<your-username>/kernel-methods-from-scratch.git
+git clone https://github.com/Marshhalz/kernel-methods-from-scratch.git
 cd kernel-methods-from-scratch
 
 # Install with uv (recommended)
